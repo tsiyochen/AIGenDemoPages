@@ -44,7 +44,7 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* --- 導覽列 (Updated for Mobile) --- */
+        /* --- 導覽列 --- */
         nav {
             position: fixed;
             top: 0;
@@ -63,7 +63,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             letter-spacing: 1px;
-            z-index: 1001; /* 確保 logo 在選單之上 */
+            z-index: 1001;
         }
 
         .nav-links {
@@ -80,7 +80,7 @@
 
         .nav-links a:hover { color: var(--accent-gold); }
 
-        /* 漢堡選單按鈕 (預設隱藏) */
+        /* 漢堡選單按鈕 */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -99,7 +99,7 @@
         /* --- Hero Section --- */
         header {
             height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1553524313-64253db51c27?q=80&w=2070&auto=format&fit=crop');
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1495131096870-3ae4309a6332?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -194,16 +194,67 @@
             flex: 1;
             min-width: 300px;
             height: 400px;
-            background-image: url('https://images.unsplash.com/photo-1448698733180-284c8e087a69?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1547346390-5c4c854419d2?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             border-radius: 8px;
             box-shadow: 10px 10px 0px var(--primary-blue);
         }
 
+        /* --- 俱樂部介紹 (Clubs) --- */
+        #clubs {
+            background-color: var(--cream-bg);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .club-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .club-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .club-card:hover { transform: translateY(-5px); }
+
+        .club-img {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .club-content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .club-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .club-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .club-link:hover { text-decoration: underline; }
+
         /* --- 裝備介紹 (Equipment) --- */
         #equipment {
-            background-color: var(--cream-bg);
+            background-color: white;
         }
 
         .gear-section-title {
@@ -222,7 +273,7 @@
         }
 
         .gear-item {
-            background: white;
+            background: var(--cream-bg);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -232,12 +283,30 @@
 
         .gear-item:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-        .gear-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+        .gear-icon { 
+            font-size: 2.5rem; 
+            margin-bottom: 15px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px; /* 固定高度以容納 SVG */
+        }
         
+        /* 專門針對 SVG 圖示的樣式設定 */
+        .gear-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: var(--leather-brown); /* 使用皮革棕色 */
+        }
+
         .gear-item h4 { color: var(--primary-blue); margin-bottom: 10px; }
         .gear-item p { font-size: 0.9rem; color: #666; }
 
         /* --- 項目介紹 (Disciplines) --- */
+        #disciplines {
+            background-color: var(--cream-bg);
+        }
+
         .disciplines-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -262,7 +331,7 @@
             background-position: center;
         }
 
-        .card-content { padding: 25px; flex-grow: 1; }
+        .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
 
         .card-content h3 {
             color: var(--primary-blue);
@@ -278,6 +347,27 @@
             background: #f4f4f4;
             padding: 10px;
             border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        /* RWD 影片容器 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin-top: auto;
+            border-radius: 4px;
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         /* --- 實戰接觸技巧 (Handling) --- */
@@ -364,16 +454,14 @@
             font-size: 0.9rem;
         }
 
-        /* --- RWD 手機版設定 (新增 Menu 邏輯) --- */
+        /* --- RWD 手機版設定 --- */
         @media (max-width: 768px) {
-            .hamburger {
-                display: flex; /* 顯示漢堡按鈕 */
-            }
+            .hamburger { display: flex; }
 
             .nav-links {
-                display: none; /* 預設隱藏 */
+                display: none;
                 position: absolute;
-                top: 60px; /* 在導覽列下方 */
+                top: 60px;
                 left: 0;
                 width: 100%;
                 background: rgba(27, 38, 59, 0.98);
@@ -385,7 +473,7 @@
             }
 
             .nav-links.active {
-                display: flex; /* 啟用時顯示 */
+                display: flex;
                 animation: slideDown 0.3s ease;
             }
 
@@ -413,16 +501,14 @@
     <!-- 導覽列 -->
     <nav>
         <div class="logo">Equestrian Insight</div>
-        
-        <!-- 漢堡選單按鈕 -->
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
         <div class="nav-links">
             <a href="#origins">起源</a>
+            <a href="#clubs">場地</a>
             <a href="#equipment">裝備</a>
             <a href="#disciplines">項目</a>
             <a href="#handling">接觸技巧</a>
@@ -459,6 +545,41 @@
         </div>
     </section>
 
+    <!-- 場地與俱樂部介紹 -->
+    <section id="clubs">
+        <div class="section-title">
+            <h2>場地與合作俱樂部</h2>
+            <span></span>
+            <p>本次活動相關的重要據點</p>
+        </div>
+
+        <div class="club-grid">
+            <!-- Thai Polo & Equestrian Club -->
+            <div class="club-card">
+                <div class="club-img" style="background-image: url('https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="club-content">
+                    <h3>Thai Polo & Equestrian Club</h3>
+                    <p><strong>地點：</strong>泰國芭達雅 (Pattaya)</p>
+                    <p style="margin-top:10px;">亞洲首屈一指的馬術俱樂部。擁有世界級的馬球場、障礙場與舞步場地。</p>
+                    <p style="margin-top:10px; color:#666; font-size:0.9rem;"><strong>特色：</strong>這裡結合了高強度的體育競技與優雅的社交生活。氛圍類似英式俱樂部，對於服裝禮儀 (Smart Casual) 有一定要求。</p>
+                    <a href="https://www.instagram.com/thaipolo.club/" target="_blank" class="club-link">查看官方 Instagram →</a>
+                </div>
+            </div>
+
+            <!-- 漢諾威馬術俱樂部 -->
+            <div class="club-card">
+                <div class="club-img" style="background-image: url('https://images.unsplash.com/photo-1551887196-72e32bfc7276?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="club-content">
+                    <h3>漢諾威馬術俱樂部 (Hannover)</h3>
+                    <p><strong>地點：</strong>台北市北投區</p>
+                    <p style="margin-top:10px;">致力於推廣正統英式馬術，引進德國專業教學系統。</p>
+                    <p style="margin-top:10px; color:#666; font-size:0.9rem;"><strong>知識來源：</strong>本網站中的「接觸技巧」與「裝備安全」知識，皆源自漢諾威強調的馬術基礎教育 (Basic Handling)，強調安全與人馬互動的正確觀念。</p>
+                    <a href="https://www.hannover.com.tw/h/index?key=089719951528" target="_blank" class="club-link">訪問官方網站 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 騎馬裝備介紹 -->
     <section id="equipment">
         <div class="section-title">
@@ -466,8 +587,6 @@
             <span></span>
             <p style="margin-top:10px;">你需要認識這些，這樣當選手說「幫我拿XXX」時才不會拿錯。</p>
         </div>
-
-        <!-- 騎士裝備 -->
         <h3 class="gear-section-title">👤 騎士裝備 (Rider)</h3>
         <div class="gear-grid">
             <div class="gear-item">
@@ -492,16 +611,26 @@
             </div>
         </div>
 
-        <!-- 馬匹裝備 -->
         <h3 class="gear-section-title">🐎 馬匹裝備 (Horse)</h3>
         <div class="gear-grid">
             <div class="gear-item">
-                <span class="gear-icon">🪑</span>
+                <span class="gear-icon">
+                    <!-- 馬鞍 SVG Icon -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 13c0-2.8-1.6-5.3-4-6.6V5c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v1.4C6.6 7.7 5 10.2 5 13c0 1.7.5 3.2 1.3 4.6l.1.2c1.3 2.2 4.1 2.9 6.3 1.6 2.2 1.3 5 0.6 6.3-1.6l.1-.2c.8-1.4 1.3-2.9 1.3-4.6z" opacity="0.9"/>
+                        <path d="M12 5c1.1 0 2 .9 2 2v2h-4V7c0-1.1.9-2 2-2z"/>
+                    </svg>
+                </span>
                 <h4>馬鞍 (Saddle)</h4>
                 <p>不同項目有不同形狀。舞步鞍較深（坐得穩），障礙鞍較淺（利於起立）。</p>
             </div>
             <div class="gear-item">
-                <span class="gear-icon">🔗</span>
+                <span class="gear-icon">
+                    <!-- 肚帶 SVG Icon (皮帶造型) -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17,6H7C5.9,6,5,6.9,5,8v8c0,1.1,0.9,2,2,2h10c1.1,0,2-0.9,2-2V8C19,6.9,18.1,6,17,6z M17,16H7V8h10V16z M8,10h2v4H8V10z M14,10h2v4h-2V10z"/>
+                    </svg>
+                </span>
                 <h4>肚帶 (Girth)</h4>
                 <p><strong>助手重點檢查：</strong>這是固定馬鞍的帶子。一定要綁緊，否則馬鞍滑動會導致落馬。</p>
             </div>
@@ -511,7 +640,12 @@
                 <p>套在馬頭上的總稱。金屬部分含在馬嘴裡，是騎士煞車與轉向的「方向盤」。</p>
             </div>
             <div class="gear-item">
-                <span class="gear-icon">🩹</span>
+                <span class="gear-icon">
+                    <!-- 護腿 SVG Icon (護具造型) -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 4v16c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2zm2 2h6v2H9V6zm0 4h6v2H9v-2zm0 4h6v2H9v-2z"/>
+                    </svg>
+                </span>
                 <h4>護膝/綁腿 (Boots)</h4>
                 <p>保護馬腿肌腱。馬的腿非常珍貴且脆弱，移動時請小心不要踢到。</p>
             </div>
@@ -519,7 +653,7 @@
     </section>
 
     <!-- 馬術項目介紹 -->
-    <section id="disciplines" style="background-color: white;">
+    <section id="disciplines">
         <div class="section-title">
             <h2>馬術項目介紹</h2>
             <span></span>
@@ -529,21 +663,24 @@
         <div class="disciplines-grid">
             <!-- 盛裝舞步 -->
             <div class="card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534312277816-249f4b079263?q=80&w=2070&auto=format&fit=crop');"></div>
+                <div class="card-img" style="background-image: url('data:image/jpeg;base64,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');"></div>
                 <div class="card-content">
                     <h3>馬場馬術 (Dressage)</h3>
                     <p><strong>別名：</strong>盛裝舞步 / 馬匹的芭蕾</p>
                     <p>這是本次 FEI 活動的重點。選手在 20x60m 的場地內，讓馬匹做出規定動作。</p>
                     <div class="discipline-details">
-                        <strong>評分標準：</strong>動作的準確性、優雅度、馬匹的服從性。騎士的指令要「隱形」，看起來像馬自己在跳舞才是最高境界。<br><br>
+                        <strong>評分標準：</strong>動作的準確性、優雅度、馬匹的服從性。騎士的指令要「隱形」。<br><br>
                         <span style="color:var(--danger)">⚠️ 助手須知：</span>比賽進行時全場需絕對安靜，禁止走動。
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/t4sqvnZ5rTY" title="Dressage Highlights" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
 
             <!-- 障礙超越 -->
             <div class="card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1543166361-904c539c767d?q=80&w=2071&auto=format&fit=crop');"></div>
+                <div class="card-img" style="background-image: url('https://wowsight.tw/wp-content/uploads/2023/12/d24f226c-f81c-44ce-a9c8-a55c055887fd_0_0-jpg.webp');"></div>
                 <div class="card-content">
                     <h3>障礙超越 (Show Jumping)</h3>
                     <p><strong>關鍵字：</strong>速度、勇氣、高度</p>
@@ -552,23 +689,28 @@
                         <strong>扣分規則：</strong>
                         <ul>
                             <li>踢落障礙桿：扣 4 分</li>
-                            <li>馬匹拒跳/逃避：扣 4 分</li>
-                            <li>超時：每 4 秒扣 1 分</li>
-                            <li>落馬：直接淘汰 (Elimination)</li>
+                            <li>馬匹拒跳：扣 4 分</li>
+                            <li>落馬：淘汰 (Elimination)</li>
                         </ul>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/3v6qQzQ-uAw" title="Show Jumping Highlights" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
 
             <!-- 馬球 -->
             <div class="card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1627395410076-15bc61190d35?q=80&w=2067&auto=format&fit=crop');"></div>
+                <div class="card-img" style="background-image: url('https://cw1.tw/CW/images/blog/C1447128583897.jpg');"></div>
                 <div class="card-content">
                     <h3>馬球 (Polo)</h3>
                     <p><strong>場地特性：</strong>Thai Polo Club 專長</p>
                     <p>雖然這次是去協助舞步表演，但你身處亞洲頂級馬球俱樂部，這是他們的招牌。</p>
                     <div class="discipline-details">
-                        <strong>特色：</strong>這是一種極快節奏的團體運動。馬匹需要極強的急停轉向能力。場地比足球場還大很多 (約 270m x 150m)。
+                        <strong>特色：</strong>這是一種極快節奏的團體運動。場地比足球場還大很多。
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/8Q_tq-F-kSc" title="Thai Polo Club Highlights" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -582,9 +724,7 @@
             <span></span>
             <p>引用自漢諾威馬術俱樂部基礎知識，助手必學的 SOP</p>
         </div>
-
         <div class="tips-container">
-            <!-- 技巧 1 -->
             <div class="tip-box">
                 <h3><span>👋</span> 如何接近馬匹</h3>
                 <p style="margin-bottom:15px;">馬的視覺有盲點，切勿無聲無息地突然出現。</p>
@@ -594,8 +734,6 @@
                     <li><strong>觀察反應：</strong>若馬耳朵向後貼平，表示牠在警戒或生氣，請暫停靠近。</li>
                 </ul>
             </div>
-
-            <!-- 技巧 2 -->
             <div class="tip-box">
                 <h3><span>🚶</span> 牽馬要領 (Leading)</h3>
                 <p style="margin-bottom:15px;">當你需要幫忙把馬從馬廄牽到表演場時：</p>
@@ -605,8 +743,6 @@
                     <li><strong>安全禁忌：</strong>絕對<strong>不要將韁繩纏繞在手上</strong>！萬一馬受驚狂奔，纏繞會導致你的手被勒斷或拖行。</li>
                 </ul>
             </div>
-
-            <!-- 技巧 3 -->
             <div class="tip-box">
                 <h3><span>🥕</span> 餵食與上下馬</h3>
                 <p style="margin-bottom:15px;">後台互動的小眉角：</p>
@@ -626,7 +762,6 @@
             <span></span>
             <p style="color: rgba(255,255,255,0.8); margin-top:10px;">你是去幫忙的，首要任務是不讓自己受傷，也不讓馬受驚。</p>
         </div>
-
         <div class="safety-grid">
             <div class="safety-card">
                 <span class="safety-icon warning">⛔</span>
@@ -644,7 +779,6 @@
                 <p>馬對高頻聲音敏感。場邊工作時手機務必靜音。不要奔跑，不要突然舉手歡呼。</p>
             </div>
         </div>
-
         <div class="thai-tips">
             <h3 style="color: var(--primary-blue); margin-bottom: 15px;">🇹🇭 泰國芭達雅 (Pattaya) 實戰 Tips</h3>
             <ul style="list-style: disc; padding-left: 20px;">
@@ -660,20 +794,16 @@
         <p style="font-size: 0.8rem; margin-top: 5px;">Reference: CTEA, FEI, Hannover Equestrian, Thai Polo Club</p>
     </footer>
 
-    <!-- JavaScript 控制選單 -->
     <script>
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
-
-        // 點擊連結後自動關閉選單
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.remove('active');
             });
         });
     </script>
-
 </body>
 </html>
