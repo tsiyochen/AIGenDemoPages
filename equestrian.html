@@ -44,7 +44,7 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* --- 導覽列 --- */
+        /* --- 導覽列 (Updated for Mobile) --- */
         nav {
             position: fixed;
             top: 0;
@@ -63,6 +63,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             letter-spacing: 1px;
+            z-index: 1001; /* 確保 logo 在選單之上 */
         }
 
         .nav-links {
@@ -78,6 +79,22 @@
         }
 
         .nav-links a:hover { color: var(--accent-gold); }
+
+        /* 漢堡選單按鈕 (預設隱藏) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            transition: 0.3s;
+        }
 
         /* --- Hero Section --- */
         header {
@@ -263,7 +280,7 @@
             border-radius: 4px;
         }
 
-        /* --- 實戰接觸技巧 (Handling - New from Hannover) --- */
+        /* --- 實戰接觸技巧 (Handling) --- */
         #handling {
             background-color: #fff;
         }
@@ -347,11 +364,47 @@
             font-size: 0.9rem;
         }
 
+        /* --- RWD 手機版設定 (新增 Menu 邏輯) --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .hamburger {
+                display: flex; /* 顯示漢堡按鈕 */
+            }
+
+            .nav-links {
+                display: none; /* 預設隱藏 */
+                position: absolute;
+                top: 60px; /* 在導覽列下方 */
+                left: 0;
+                width: 100%;
+                background: rgba(27, 38, 59, 0.98);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+                box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+            }
+
+            .nav-links.active {
+                display: flex; /* 啟用時顯示 */
+                animation: slideDown 0.3s ease;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+                font-size: 1.2rem;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
             .hero-content h1 { font-size: 2.5rem; }
             section { padding: 60px 5%; }
             .origins-img { height: 250px; }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -360,6 +413,14 @@
     <!-- 導覽列 -->
     <nav>
         <div class="logo">Equestrian Insight</div>
+        
+        <!-- 漢堡選單按鈕 -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <div class="nav-links">
             <a href="#origins">起源</a>
             <a href="#equipment">裝備</a>
@@ -514,7 +575,7 @@
         </div>
     </section>
 
-    <!-- 新增：接觸技巧 (Hannover Source) -->
+    <!-- 接觸技巧 (Handling) -->
     <section id="handling">
         <div class="section-title">
             <h2>實戰技巧：接觸與牽馬 (Handling)</h2>
@@ -598,6 +659,21 @@
         <p>Good Luck in Thailand! | Created for Equestrian Assistance</p>
         <p style="font-size: 0.8rem; margin-top: 5px;">Reference: CTEA, FEI, Hannover Equestrian, Thai Polo Club</p>
     </footer>
+
+    <!-- JavaScript 控制選單 -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // 點擊連結後自動關閉選單
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
