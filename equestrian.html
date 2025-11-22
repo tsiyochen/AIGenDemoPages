@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equestrian Insight | 泰國馬術行前指南</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- 變數設定 --- */
+        :root {
+            --primary-blue: #1B263B; /* 皇家深藍 */
+            --secondary-blue: #415A77;
+            --accent-gold: #C1A363; /* 馬術金 */
+            --leather-brown: #8D6E63; /* 皮革棕 */
+            --cream-bg: #F9F7F2; /* 奶油白背景 */
+            --text-dark: #333333;
+            --text-light: #F9F7F2;
+            --danger: #D32F2F;
+            --success: #2E7D32;
+        }
+
+        /* --- 基礎設定 --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- 導覽列 --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(27, 38, 59, 0.98);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover { color: var(--accent-gold); }
+
+        /* --- Hero Section --- */
+        header {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1553524313-64253db51c27?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
+            font-weight: bold;
+            border-radius: 2px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* --- 通用區塊 --- */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .section-title span {
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 0 auto;
+        }
+
+        /* --- 起源 (Origins) --- */
+        #origins {
+            background-color: white;
+        }
+
+        .origins-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .origins-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .origins-text p { margin-bottom: 20px; text-align: justify; }
+
+        .origins-highlight {
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 20px;
+            font-style: italic;
+            color: var(--secondary-blue);
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .origins-img {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1448698733180-284c8e087a69?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 10px 10px 0px var(--primary-blue);
+        }
+
+        /* --- 裝備介紹 (Equipment) --- */
+        #equipment {
+            background-color: var(--cream-bg);
+        }
+
+        .gear-section-title {
+            font-size: 1.5rem;
+            color: var(--leather-brown);
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .gear-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .gear-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .gear-item:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        .gear-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+        
+        .gear-item h4 { color: var(--primary-blue); margin-bottom: 10px; }
+        .gear-item p { font-size: 0.9rem; color: #666; }
+
+        /* --- 項目介紹 (Disciplines) --- */
+        .disciplines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content { padding: 25px; flex-grow: 1; }
+
+        .card-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .discipline-details {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        /* --- 實戰接觸技巧 (Handling - New from Hannover) --- */
+        #handling {
+            background-color: #fff;
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .tip-box {
+            border-left: 5px solid var(--secondary-blue);
+            padding-left: 25px;
+        }
+
+        .tip-box h3 {
+            color: var(--secondary-blue);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .tip-box h3 span { margin-right: 10px; font-size: 1.8rem; }
+
+        .step-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .step-list li::before {
+            content: "•";
+            color: var(--accent-gold);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- 生存指南 (Safety) --- */
+        .safety-section {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .safety-section .section-title h2 { color: white; }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .safety-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        .safety-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .warning { color: #FF6B6B; }
+        .info { color: #4FC3F7; }
+
+        .thai-tips {
+            background-color: white;
+            border-top: 5px solid var(--accent-gold);
+            margin-top: 50px;
+            padding: 40px;
+            border-radius: 8px;
+            color: var(--text-dark);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            section { padding: 60px 5%; }
+            .origins-img { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav>
+        <div class="logo">Equestrian Insight</div>
+        <div class="nav-links">
+            <a href="#origins">起源</a>
+            <a href="#equipment">裝備</a>
+            <a href="#disciplines">項目</a>
+            <a href="#handling">接觸技巧</a>
+            <a href="#safety">助手必讀</a>
+        </div>
+    </nav>
+
+    <!-- 主視覺 -->
+    <header>
+        <div class="hero-content">
+            <h1>優雅與力量的共舞</h1>
+            <p>協助泰國馬術表演 (Thai Polo & Equestrian Club) 實戰指南</p>
+            <a href="#safety" class="btn">跳轉至：助手安全須知</a>
+        </div>
+    </header>
+
+    <!-- 馬術起源 -->
+    <section id="origins">
+        <div class="section-title">
+            <h2>馬術起源與精神</h2>
+            <span></span>
+        </div>
+        <div class="origins-container">
+            <div class="origins-text">
+                <p>馬術 (Horsemanship) 起源於公元前四世紀的亞洲，最初是為了軍事戰車與戰爭訓練而生。直到西元1912年，斯德哥爾摩奧運會正式將馬術列為比賽項目。</p>
+                
+                <div class="origins-highlight">
+                    「馬術是奧運會中，唯一一項必須由選手與有生命的動物相配合的比賽項目。」
+                </div>
+
+                <p>CTEA (中華民國馬術協會) 指出，現代馬術發展自歐洲皇室，因此服裝禮儀極為重要，這也是為什麼即便在泰國的熱天，選手依然穿著正式。在現場觀賽時，請把它當作是一場「無聲的對話」，講求信任與和諧。</p>
+            </div>
+            <div class="origins-img" role="img" aria-label="Vintage Horse Riding"></div>
+        </div>
+    </section>
+
+    <!-- 騎馬裝備介紹 -->
+    <section id="equipment">
+        <div class="section-title">
+            <h2>工欲善其事：裝備介紹</h2>
+            <span></span>
+            <p style="margin-top:10px;">你需要認識這些，這樣當選手說「幫我拿XXX」時才不會拿錯。</p>
+        </div>
+
+        <!-- 騎士裝備 -->
+        <h3 class="gear-section-title">👤 騎士裝備 (Rider)</h3>
+        <div class="gear-grid">
+            <div class="gear-item">
+                <span class="gear-icon">⛑️</span>
+                <h4>安全帽 (Helmet)</h4>
+                <p><strong>絕對必備。</strong>保護頭部，若發生落馬意外能保命。現代設計強調通風。</p>
+            </div>
+            <div class="gear-item">
+                <span class="gear-icon">👢</span>
+                <h4>長靴/綁腿 (Boots)</h4>
+                <p>防止小腿磨傷，且腳跟有特殊鞋跟設計，防止腳滑入腳蹬造成危險。</p>
+            </div>
+            <div class="gear-item">
+                <span class="gear-icon">👖</span>
+                <h4>馬褲 (Breeches)</h4>
+                <p>內側有防滑材質，彈性極佳。這不是一般緊身褲，是為了增加抓地力。</p>
+            </div>
+            <div class="gear-item">
+                <span class="gear-icon">🧤</span>
+                <h4>手套 (Gloves)</h4>
+                <p>增加摩擦力握緊韁繩，並保護手不被皮繩磨破。</p>
+            </div>
+        </div>
+
+        <!-- 馬匹裝備 -->
+        <h3 class="gear-section-title">🐎 馬匹裝備 (Horse)</h3>
+        <div class="gear-grid">
+            <div class="gear-item">
+                <span class="gear-icon">🪑</span>
+                <h4>馬鞍 (Saddle)</h4>
+                <p>不同項目有不同形狀。舞步鞍較深（坐得穩），障礙鞍較淺（利於起立）。</p>
+            </div>
+            <div class="gear-item">
+                <span class="gear-icon">🔗</span>
+                <h4>肚帶 (Girth)</h4>
+                <p><strong>助手重點檢查：</strong>這是固定馬鞍的帶子。一定要綁緊，否則馬鞍滑動會導致落馬。</p>
+            </div>
+            <div class="gear-item">
+                <span class="gear-icon">🐴</span>
+                <h4>韁繩與口銜 (Bridle & Bit)</h4>
+                <p>套在馬頭上的總稱。金屬部分含在馬嘴裡，是騎士煞車與轉向的「方向盤」。</p>
+            </div>
+            <div class="gear-item">
+                <span class="gear-icon">🩹</span>
+                <h4>護膝/綁腿 (Boots)</h4>
+                <p>保護馬腿肌腱。馬的腿非常珍貴且脆弱，移動時請小心不要踢到。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 馬術項目介紹 -->
+    <section id="disciplines" style="background-color: white;">
+        <div class="section-title">
+            <h2>馬術項目介紹</h2>
+            <span></span>
+            <p>這次去泰國可能會遇到的主要類型</p>
+        </div>
+
+        <div class="disciplines-grid">
+            <!-- 盛裝舞步 -->
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534312277816-249f4b079263?q=80&w=2070&auto=format&fit=crop');"></div>
+                <div class="card-content">
+                    <h3>馬場馬術 (Dressage)</h3>
+                    <p><strong>別名：</strong>盛裝舞步 / 馬匹的芭蕾</p>
+                    <p>這是本次 FEI 活動的重點。選手在 20x60m 的場地內，讓馬匹做出規定動作。</p>
+                    <div class="discipline-details">
+                        <strong>評分標準：</strong>動作的準確性、優雅度、馬匹的服從性。騎士的指令要「隱形」，看起來像馬自己在跳舞才是最高境界。<br><br>
+                        <span style="color:var(--danger)">⚠️ 助手須知：</span>比賽進行時全場需絕對安靜，禁止走動。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 障礙超越 -->
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1543166361-904c539c767d?q=80&w=2071&auto=format&fit=crop');"></div>
+                <div class="card-content">
+                    <h3>障礙超越 (Show Jumping)</h3>
+                    <p><strong>關鍵字：</strong>速度、勇氣、高度</p>
+                    <p>選手必須依路線順序跳過障礙，不能掉桿。</p>
+                    <div class="discipline-details">
+                        <strong>扣分規則：</strong>
+                        <ul>
+                            <li>踢落障礙桿：扣 4 分</li>
+                            <li>馬匹拒跳/逃避：扣 4 分</li>
+                            <li>超時：每 4 秒扣 1 分</li>
+                            <li>落馬：直接淘汰 (Elimination)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 馬球 -->
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1627395410076-15bc61190d35?q=80&w=2067&auto=format&fit=crop');"></div>
+                <div class="card-content">
+                    <h3>馬球 (Polo)</h3>
+                    <p><strong>場地特性：</strong>Thai Polo Club 專長</p>
+                    <p>雖然這次是去協助舞步表演，但你身處亞洲頂級馬球俱樂部，這是他們的招牌。</p>
+                    <div class="discipline-details">
+                        <strong>特色：</strong>這是一種極快節奏的團體運動。馬匹需要極強的急停轉向能力。場地比足球場還大很多 (約 270m x 150m)。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增：接觸技巧 (Hannover Source) -->
+    <section id="handling">
+        <div class="section-title">
+            <h2>實戰技巧：接觸與牽馬 (Handling)</h2>
+            <span></span>
+            <p>引用自漢諾威馬術俱樂部基礎知識，助手必學的 SOP</p>
+        </div>
+
+        <div class="tips-container">
+            <!-- 技巧 1 -->
+            <div class="tip-box">
+                <h3><span>👋</span> 如何接近馬匹</h3>
+                <p style="margin-bottom:15px;">馬的視覺有盲點，切勿無聲無息地突然出現。</p>
+                <ul class="step-list">
+                    <li><strong>先發出聲音：</strong>在接近前輕聲呼喚，讓馬知道你來了。</li>
+                    <li><strong>接近角度：</strong>從馬的<strong>左前方 45 度角</strong>接近（這是馬最習慣的一側）。</li>
+                    <li><strong>觀察反應：</strong>若馬耳朵向後貼平，表示牠在警戒或生氣，請暫停靠近。</li>
+                </ul>
+            </div>
+
+            <!-- 技巧 2 -->
+            <div class="tip-box">
+                <h3><span>🚶</span> 牽馬要領 (Leading)</h3>
+                <p style="margin-bottom:15px;">當你需要幫忙把馬從馬廄牽到表演場時：</p>
+                <ul class="step-list">
+                    <li><strong>站位：</strong>人站在馬的<strong>左側</strong>，與馬頭保持平行或稍前。</li>
+                    <li><strong>握繩方式 (重要)：</strong>右手在馬口銜下方約一尺處握住韁繩；左手握住剩下的繩子。</li>
+                    <li><strong>安全禁忌：</strong>絕對<strong>不要將韁繩纏繞在手上</strong>！萬一馬受驚狂奔，纏繞會導致你的手被勒斷或拖行。</li>
+                </ul>
+            </div>
+
+            <!-- 技巧 3 -->
+            <div class="tip-box">
+                <h3><span>🥕</span> 餵食與上下馬</h3>
+                <p style="margin-bottom:15px;">後台互動的小眉角：</p>
+                <ul class="step-list">
+                    <li><strong>餵食零食：</strong>手掌<strong>完全攤平</strong>（像 High-Five 的姿勢），將食物放在手心，避免手指被馬誤咬。</li>
+                    <li><strong>上下馬側：</strong>傳統上，所有上下馬動作都在馬的<strong>左側</strong>進行。</li>
+                    <li><strong>停止輔助：</strong>牽馬停止時，人側身面對馬頸部，用肢體語言示意停止。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 助手生存指南 -->
+    <section id="safety" class="safety-section">
+        <div class="section-title">
+            <h2>助手生存法則 (Safety First)</h2>
+            <span></span>
+            <p style="color: rgba(255,255,255,0.8); margin-top:10px;">你是去幫忙的，首要任務是不讓自己受傷，也不讓馬受驚。</p>
+        </div>
+
+        <div class="safety-grid">
+            <div class="safety-card">
+                <span class="safety-icon warning">⛔</span>
+                <h3>死亡紅區 (Blind Spot)</h3>
+                <p><strong>永遠不要站在馬的正後方。</strong>馬的後腿踢擊力量足以致命。若需經過後方，請把手搭在馬屁股上跟牠說話，讓牠知道你在這。</p>
+            </div>
+            <div class="safety-card">
+                <span class="safety-icon info">👂</span>
+                <h3>讀懂馬耳 (Ears)</h3>
+                <p>耳朵向前 = 開心/專注。<br>耳朵向後平貼 (Pinning ears) = <strong>生氣/警告 (快逃)</strong>。</p>
+            </div>
+            <div class="safety-card">
+                <span class="safety-icon warning">🔕</span>
+                <h3>聲音控制 (Sound)</h3>
+                <p>馬對高頻聲音敏感。場邊工作時手機務必靜音。不要奔跑，不要突然舉手歡呼。</p>
+            </div>
+        </div>
+
+        <div class="thai-tips">
+            <h3 style="color: var(--primary-blue); margin-bottom: 15px;">🇹🇭 泰國芭達雅 (Pattaya) 實戰 Tips</h3>
+            <ul style="list-style: disc; padding-left: 20px;">
+                <li style="margin-bottom: 10px;"><strong>天氣應對：</strong>極度悶熱。表演後馬匹需要大量降溫（沖水、刮水），這可能是助手最忙碌的時刻。</li>
+                <li style="margin-bottom: 10px;"><strong>服裝禮儀：</strong>Thai Polo Club 是高級俱樂部。工作時建議穿著有領 Polo 衫 + 長褲（深色耐髒），穿包頭鞋。<strong>嚴禁穿夾腳拖。</strong></li>
+                <li style="margin-bottom: 10px;"><strong>情緒管理：</strong>馬能感受到你的緊張。保持深呼吸，動作放慢，你會發現馬也會跟著放鬆。</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Good Luck in Thailand! | Created for Equestrian Assistance</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">Reference: CTEA, FEI, Hannover Equestrian, Thai Polo Club</p>
+    </footer>
+
+</body>
+</html>
