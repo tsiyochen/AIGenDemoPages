@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳怡如 Linda Chen | FEI 亞洲盃馬術錦標賽紀錄</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                50: '#f0f4f8',
+                800: '#1e293b',
+                900: '#0f172a',
+              },
+              gold: {
+                500: '#d4af37',
+                600: '#b4942b',
+              },
+              cream: {
+                50: '#fdfbf7',
+              },
+            },
+            fontFamily: {
+              sans: ['"Noto Sans TC"', 'sans-serif'],
+              serif: ['"Noto Serif TC"', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+          width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+          background: #d4af37;
+          border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+          background: #b4942b;
+      }
+
+      /* Animation Utilities */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        will-change: opacity, visibility;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+      
+      /* Staggered delays */
+      .delay-100 { transition-delay: 100ms; }
+      .delay-200 { transition-delay: 200ms; }
+      .delay-300 { transition-delay: 300ms; }
+      .delay-400 { transition-delay: 400ms; }
+      .delay-500 { transition-delay: 500ms; }
+    </style>
+</head>
+<body class="bg-cream-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-navy-900/90 backdrop-blur-md text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <span class="font-serif text-2xl font-bold tracking-widest text-gold-500">
+                        LINDA CHEN
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-gold-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">Linda & Chassot</a>
+                        <a href="#championships" class="hover:text-gold-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">亞錦賽介紹</a>
+                        <a href="#gallery" class="hover:text-gold-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">賽事集錦</a>
+                        <a href="#news" class="hover:text-gold-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">相關新聞</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-navy-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gold-500">Linda & Chassot</a>
+                <a href="#championships" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gold-500">亞錦賽介紹</a>
+                <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gold-500">賽事集錦</a>
+                <a href="#news" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gold-500">相關新聞</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[60vh] flex items-center justify-center bg-fixed bg-center bg-cover bg-no-repeat"
+        style="background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1551884831-bbf3ddd77535?q=80&w=2070&auto=format&fit=crop');">
+        <div class="text-center text-white px-4 fade-in-section">
+            <div class="mb-4 inline-block">
+                <span class="bg-gold-500 text-navy-900 px-4 py-1 rounded-full font-bold text-sm tracking-wider uppercase">
+                    Team Taiwan
+                </span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 tracking-wide leading-tight">
+                陳怡如
+                <span class="block text-2xl md:text-4xl mt-2 font-light italic">
+                    Linda Chen
+                </span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto text-gray-200">
+                斜槓 CEO 的馬術人生 
+                <span class="hidden md:inline mx-2">·</span>
+                <br class="block md:hidden" />
+                FEI 亞洲盃馬術錦標賽國手
+            </p>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white opacity-70 hover:opacity-100 transition-opacity">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-12 md:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center fade-in-section">
+            <i class="fas fa-quote-left text-4xl text-gold-500 mb-6 opacity-50"></i>
+            <h2 class="text-3xl md:text-4xl font-serif text-navy-900 leading-relaxed italic mb-8">
+                「在馬背上，你是沒辦法偽裝的。<br>這項運動裡，你必須要很努力練習、學習，<br>才有辦法真正的與馬和諧共存。」
+            </h2>
+            <p class="text-gray-500 font-medium tracking-widest uppercase">
+                — 陳怡如 Linda Chen
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 md:py-24 bg-cream-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side - Landscape -->
+                <div class="relative fade-in-section">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold-500 z-0"></div>
+                    <div class="relative z-10 aspect-[16/10] overflow-hidden bg-gray-200 shadow-xl group">
+                        <!-- 圖片路徑：對應您的本地資料夾 ./image/合照.JPG -->
+                        <img src="./合照.JPG" 
+                             alt="陳怡如與陳夏碩 Chassot" 
+                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 bg-navy-900/80 text-white p-4 w-full backdrop-blur-sm flex justify-between items-end">
+                            <div>
+                                <h3 class="text-lg font-bold mb-1">搭擋夥伴</h3>
+                                <p class="text-gold-500 font-serif text-xl">陳怡如 Linda & 陳夏碩 Chassot</p>
+                            </div>
+                            <i class="fas fa-horse text-gold-500 text-2xl opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div class="space-y-8 fade-in-section delay-200">
+                    <div>
+                        <h2 class="text-gold-600 font-bold tracking-widest uppercase text-sm mb-2">The Journey</h2>
+                        <h3 class="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-6">
+                            17年的堅持，<br>用責任換來的夢想
+                        </h3>
+                    </div>
+
+                    <div class="prose prose-lg text-gray-600 space-y-4">
+                        <p>
+                            對於陳怡如而言，馬術不僅是運動，更是一場「人生修煉」。身為上市公司的總經理，她在繁忙的商務會議與嚴格的馬術訓練之間切換自如。
+                        </p>
+                        <p>
+                            從2008年開始，這條通往國手的路走了整整17年。起初，家人並不支持這項高風險的運動，甚至在她摔馬受傷後仍極力反對。但她用行動證明了決心：「打上石膏拆掉後，我就馬上跑去馬場騎馬。」
+                        </p>
+                        <p>
+                            最終，她與家人達成了一項動人的協議：「我可以回來接班，但請你們不要阻止我。」她用對家族事業的責任，換取了在馬背上飛翔的夢想。
+                        </p>
+                        <p>
+                            2025年，她終於披上中華隊戰袍，參加於泰國舉行的 <strong>第二屆 FEI 亞洲盃馬術錦標賽</strong>，出戰馬場馬術 (Dressage) 的團體賽與個人賽。
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 mt-4">
+                        <div class="flex items-center gap-3 bg-white px-5 py-3 shadow-sm border-l-4 border-gold-500">
+                            <i class="fas fa-briefcase text-navy-900 text-xl"></i>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase">職業</p>
+                                <p class="font-bold text-navy-900">上市公司 CEO</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white px-5 py-3 shadow-sm border-l-4 border-gold-500">
+                            <i class="fas fa-horse-head text-navy-900 text-xl"></i>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase">運動項目</p>
+                                <p class="font-bold text-navy-900">馬場馬術 Dressage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Championships Section -->
+    <section id="championships" class="py-12 md:py-24 bg-white relative overflow-hidden">
+        <!-- Decorative background element -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-cream-50 -skew-x-12 transform translate-x-20 z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 space-y-8 fade-in-section">
+                    <div>
+                        <h2 class="text-gold-600 font-bold tracking-widest uppercase text-sm mb-2">The Grand Stage</h2>
+                        <h3 class="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-6 leading-tight">
+                            FEI 亞洲盃<br>馬術錦標賽
+                        </h3>
+                        <p class="text-xl text-navy-800 font-medium border-l-4 border-gold-500 pl-4">
+                            FEI Asian Championships 2025
+                        </p>
+                    </div>
+
+                    <div class="prose prose-lg text-gray-600 space-y-6">
+                        <p>
+                            國際馬術總會（FEI）亞洲盃錦標賽是亞洲地區最高級別的馬術盛事之一，匯集了來自亞洲各國的頂尖騎手與名駒。這不僅是一場競技較量，更是展現各國馬術發展實力與騎士精神的最高殿堂。
+                        </p>
+                        <p>
+                            2025 年第二屆賽事於泰國芭達雅（Pattaya）的泰國馬球及馬術俱樂部（Thai Polo & Equestrian Club）盛大舉行。比賽項目涵蓋馬場馬術（Dressage）、障礙超越（Jumping）與三日賽（Eventing）。
+                        </p>
+                        <p>
+                            陳怡如代表中華隊出戰<strong>馬場馬術項目</strong>，在這場亞洲級別的賽事中，與來自日、韓、泰、中等強隊同場競技，爭取榮耀。
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="bg-navy-50 p-6 rounded-lg">
+                            <i class="fas fa-map-marked-alt text-3xl text-gold-500 mb-3"></i>
+                            <h4 class="font-bold text-navy-900 mb-1">比賽地點</h4>
+                            <p class="text-sm text-gray-600">Thailand, Pattaya</p>
+                        </div>
+                        <div class="bg-navy-50 p-6 rounded-lg">
+                            <i class="fas fa-calendar-alt text-3xl text-gold-500 mb-3"></i>
+                            <h4 class="font-bold text-navy-900 mb-1">比賽年份</h4>
+                            <p class="text-sm text-gray-600">2025 Nov&Dec</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full fade-in-section delay-200 flex flex-col items-center">
+                    <div class="relative w-full">
+                        <div class="relative rounded-lg overflow-hidden shadow-2xl aspect-[4/3]">
+                            <img src="./FEI.jpg" 
+                                 alt="FEI Asian Championships Venue" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-navy-900/20"></div>
+                            
+                            <!-- Badge Overlay -->
+                            <div class="absolute top-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded text-center shadow-lg">
+                                <p class="text-3xl font-bold text-navy-900 font-serif">2nd</p>
+                                <p class="text-xs uppercase tracking-wider text-gold-600 font-bold">Edition</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative Frame -->
+                        <div class="absolute -bottom-6 -right-6 w-2/3 h-2/3 border-4 border-gold-500 rounded-lg -z-10 hidden md:block"></div>
+                    </div>
+                    
+                    <!-- Moved IG Button Here -->
+                    <div class="mt-8">
+                        <a href="https://www.instagram.com/acpattaya2025/" target="_blank" class="flex items-center gap-3 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-bold tracking-wide">
+                            <i class="fab fa-instagram text-2xl"></i> 
+                            <span>追蹤官方 IG 賽事動態</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-12 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 fade-in-section">
+                <div>
+                    <h2 class="text-gold-600 font-bold tracking-widest uppercase text-sm mb-2">
+                        Highlights
+                    </h2>
+                    <h3 class="text-4xl font-serif font-bold text-navy-900">
+                        亞錦賽精彩瞬間
+                    </h3>
+                </div>
+                <div class="mt-4 md:mt-0 text-gray-500 text-sm">
+                    FEI Asian Championships Pattaya 2025
+                </div>
+            </div>
+
+            <!-- Landscape Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Video Item -->
+                <div class="fade-in-section w-full md:col-span-2">
+                    <div class="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg bg-black">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="./opening.mp4" type="video/mp4">
+                            您的瀏覽器不支援影片播放，請升級瀏覽器。
+                        </video>
+                        <div class="absolute bottom-0 left-0 p-6 pointer-events-none text-white w-full bg-gradient-to-t from-black/80 to-transparent">
+                            <h4 class="text-xl font-bold">FEI 亞錦賽 - 紀錄影片</h4>
+                            <p class="text-sm opacity-80">Opening Highlight</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 1: 照片一 -->
+                <div class="fade-in-section delay-100 w-full col-span-1">
+                    <div class="relative group w-full aspect-video overflow-hidden rounded-lg shadow-lg">
+                        <img src="./照片一.jpg" 
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+                             alt="比賽照片一">
+                        <div class="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/40 transition-colors duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Image 2: 照片二 -->
+                <div class="fade-in-section delay-200 w-full col-span-1">
+                    <div class="relative group w-full aspect-video overflow-hidden rounded-lg shadow-lg">
+                        <img src="./照片二.jpg" 
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+                             alt="比賽照片二">
+                        <div class="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/40 transition-colors duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Quote Item -->
+                <div class="fade-in-section delay-300 w-full col-span-1">
+                    <div class="w-full aspect-video bg-navy-900 p-8 flex flex-col justify-center items-center text-center rounded-lg shadow-lg text-white relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 text-6xl text-gold-500 opacity-10 font-serif">"</div>
+                        <p class="text-lg font-serif italic relative z-10 leading-relaxed group-hover:text-gold-500 transition-colors px-4">
+                            除非我清楚知道身體極限已經到達了，不然我不會放棄。馬術是我一輩子沒辦法放棄的事。
+                        </p>
+                        <div class="w-12 h-0.5 bg-gold-500 mt-6"></div>
+                    </div>
+                </div>
+
+                <!-- Image 3: 照片三 -->
+                <div class="fade-in-section delay-400 w-full col-span-1">
+                    <div class="relative group w-full aspect-video overflow-hidden rounded-lg shadow-lg">
+                         <img src="./照片三.jpg" 
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+                             alt="比賽照片三">
+                        <div class="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/40 transition-colors duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- New Image: 照片五 -->
+                <div class="fade-in-section delay-100 w-full col-span-1">
+                    <div class="relative group w-full aspect-video overflow-hidden rounded-lg shadow-lg">
+                         <img src="./照片五.jpg" 
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+                             alt="比賽照片五">
+                        <div class="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/40 transition-colors duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- New Image: 照片六 -->
+                <div class="fade-in-section delay-200 w-full col-span-1">
+                    <div class="relative group w-full aspect-video overflow-hidden rounded-lg shadow-lg">
+                         <img src="./照片六.jpg" 
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+                             alt="比賽照片六">
+                        <div class="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/40 transition-colors duration-300"></div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Club Section -->
+    <section id="club" class="bg-cream-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row fade-in-section">
+                <!-- Left: Hannover Club -->
+                <div class="md:w-1/2 bg-navy-900 p-12 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-serif font-bold mb-6">所屬馬場</h2>
+                    <h3 class="text-2xl text-gold-500 mb-8">
+                        漢諾威馬術俱樂部
+                        <br>
+                        <span class="text-lg text-gray-400 font-sans font-normal">
+                            Hannover Equestrian Club
+                        </span>
+                    </h3>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-gold-500 mt-1"></i>
+                            <p class="text-gray-300">
+                                提供專業的馬術訓練環境與優質的馬匹照護，是孕育國手的搖籃。
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-star text-gold-500 mt-1"></i>
+                            <p class="text-gray-300">
+                                致力於推廣馬術運動，培養更多像陳怡如一樣優秀的選手。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- New Button for Website -->
+                    <div>
+                        <a href="https://www.hannover.com.tw/h/Index?key=089719951528" target="_blank" class="inline-block border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-navy-900 px-6 py-2 rounded transition-colors duration-300">
+                            造訪官方網站 <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Association Info (Replaced Image) -->
+                <div class="md:w-1/2 bg-navy-800 p-12 text-white flex flex-col justify-center border-l border-navy-700">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fas fa-flag text-gold-500 text-4xl"></i>
+                        <h2 class="text-3xl font-serif font-bold">中華民國馬術協會</h2>
+                    </div>
+                    <h3 class="text-xl text-gray-400 font-sans font-normal mb-8 uppercase tracking-wide">
+                        Chinese Taipei Equestrian Association
+                    </h3>
+                    
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        推動全國馬術運動發展，培育優秀選手代表國家參與國際賽事。這裡是所有馬術愛好者的大家庭，提供賽事資訊、考級檢定與專業認證。
+                    </p>
+
+                    <div>
+                        <a href="https://www.facebook.com/p/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E9%A6%AC%E8%A1%93%E5%8D%94%E6%9C%83Chinese-Taipei-Equestrian-Association-100068596600748/?locale=zh_TW" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded shadow-md transition-colors duration-300">
+                            <i class="fab fa-facebook-square text-xl mr-2"></i> 追蹤粉絲專頁
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section (Redesigned) -->
+    <section id="news" class="py-12 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-gold-500 font-bold tracking-widest uppercase text-sm">
+                    Latest Updates
+                </span>
+                <h2 class="text-4xl font-serif font-bold text-navy-900 mt-2">
+                    相關新聞
+                </h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="space-y-6">
+                <!-- News Item 1: 工商時報 -->
+                <div class="fade-in-section">
+                    <a href="https://www.ctee.com.tw/news/20251128701926-431204" target="_blank" class="block bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-gold-500 transition-all duration-300 group">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="md:w-32 flex-shrink-0">
+                                <span class="text-gold-600 font-bold text-sm">2025.11.28</span>
+                                <div class="mt-1">
+                                    <span class="inline-block bg-navy-900 text-white text-[10px] px-2 py-1 rounded font-medium tracking-wide">
+                                        工商時報
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition-colors">
+                                    花17年圓夢！陳怡如首披中華隊戰袍 征戰FEI亞洲盃
+                                </h3>
+                                <p class="text-gray-500 text-sm mt-2 line-clamp-1">
+                                    斜槓人生新篇章，代表中華隊出征泰國芭達雅，展現堅持與韌性。
+                                </p>
+                            </div>
+                            <div class="md:w-10 flex-shrink-0 text-right">
+                                <i class="fas fa-chevron-right text-gray-300 group-hover:text-gold-500 text-xl transition-colors"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- News Item 2: 風傳媒 -->
+                <div class="fade-in-section delay-100">
+                    <a href="https://www.storm.mg/article/11084457" target="_blank" class="block bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-gold-500 transition-all duration-300 group">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="md:w-32 flex-shrink-0">
+                                <span class="text-gold-600 font-bold text-sm">2025.02.05</span>
+                                <div class="mt-1">
+                                    <span class="inline-block bg-navy-900 text-white text-[10px] px-2 py-1 rounded font-medium tracking-wide">
+                                        風傳媒
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition-colors">
+                                   花17年磨一劍！斜槓CEO陳怡如披上中華隊戰袍　用馬術寫下最動人的追夢實錄
+                                </h3>
+                                <p class="text-gray-500 text-sm mt-2 line-clamp-1">
+                                    從反對到支持，用實力證明熱愛，從 CEO 到國手的心路歷程。
+                                </p>
+                            </div>
+                            <div class="md:w-10 flex-shrink-0 text-right">
+                                <i class="fas fa-chevron-right text-gray-300 group-hover:text-gold-500 text-xl transition-colors"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- News Item 3: NOWnews -->
+                <div class="fade-in-section delay-200">
+                    <a href="https://www.nownews.com/news/6759289" target="_blank" class="block bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-gold-500 transition-all duration-300 group">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="md:w-32 flex-shrink-0">
+                                <span class="text-gold-600 font-bold text-sm">2025.01.28</span>
+                                <div class="mt-1">
+                                    <span class="inline-block bg-navy-900 text-white text-[10px] px-2 py-1 rounded font-medium tracking-wide">
+                                        NOWnews
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition-colors">
+                                    特企／花17年成為馬術國手！CEO陳怡如　披中華隊戰袍征戰亞錦賽
+                                </h3>
+                                <p class="text-gray-500 text-sm mt-2 line-clamp-1">
+                                    備戰狀態絕佳，期待在國際舞台上展現人馬合一的精彩表現。
+                                </p>
+                            </div>
+                            <div class="md:w-10 flex-shrink-0 text-right">
+                                <i class="fas fa-chevron-right text-gray-300 group-hover:text-gold-500 text-xl transition-colors"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-8 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <h4 class="text-xl font-serif font-bold text-gold-500">LINDA CHEN</h4>
+                <p class="text-gray-400 text-xs mt-1">FEI 亞洲盃馬術錦標賽 中華隊選手</p>
+            </div>
+            
+            <div class="text-center text-gray-600 text-xs">
+                &copy; 2025 Linda Chen Equestrian. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Logic to replace React behavior ---
+
+        // 1. Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-navy-900', 'shadow-lg');
+                navbar.classList.remove('bg-navy-900/90');
+            } else {
+                navbar.classList.remove('bg-navy-900', 'shadow-lg');
+                navbar.classList.add('bg-navy-900/90');
+            }
+        });
+
+        // 2. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const icon = mobileMenuBtn.querySelector('i');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // 3. Fade In Animation (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
