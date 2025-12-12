@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth">
+<html lang="zh-TW" class="scroll-pt-20">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陳怡如 Linda Chen | FEI 亞洲盃馬術錦標賽紀錄</title>
+    
+    <!-- Favicon (Gold Horse Head) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐴</text></svg>">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -113,11 +117,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative h-[60vh] flex items-center justify-center bg-fixed bg-center bg-cover bg-no-repeat"
+    <section id="home" class="relative min-h-[60vh] flex items-center justify-center bg-fixed bg-center bg-cover bg-no-repeat pt-20"
         style="background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1551884831-bbf3ddd77535?q=80&w=2070&auto=format&fit=crop');">
         <div class="text-center text-white px-4 fade-in-section">
-            <div class="mb-4 inline-block">
-                <span class="bg-gold-500 text-navy-900 px-4 py-1 rounded-full font-bold text-sm tracking-wider uppercase">
+            <div class="mb-4">
+                <p class="text-xl md:text-2xl font-light mb-4 max-w-2xl mx-auto text-gray-200">
+                    斜槓 CEO 的馬術人生 
+                    <span class="hidden md:inline mx-2">·</span>
+                    <br class="block md:hidden" />
+                    FEI 亞洲盃馬術錦標賽國手
+                </p>
+                <span class="bg-gold-500 text-navy-900 px-4 py-1 rounded-full font-bold text-sm tracking-wider uppercase inline-block mt-2">
                     Team Taiwan
                 </span>
             </div>
@@ -127,18 +137,6 @@
                     Linda Chen
                 </span>
             </h1>
-            <p class="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto text-gray-200">
-                斜槓 CEO 的馬術人生 
-                <span class="hidden md:inline mx-2">·</span>
-                <br class="block md:hidden" />
-                FEI 亞洲盃馬術錦標賽國手
-            </p>
-        </div>
-
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-white opacity-70 hover:opacity-100 transition-opacity">
-                <i class="fas fa-chevron-down text-3xl"></i>
-            </a>
         </div>
     </section>
 
@@ -169,7 +167,7 @@
                              class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute bottom-0 left-0 bg-navy-900/80 text-white p-4 w-full backdrop-blur-sm flex justify-between items-end">
                             <div>
-                                <h3 class="text-lg font-bold mb-1">搭擋夥伴</h3>
+                                <h3 class="text-lg font-bold mb-1">搭檔夥伴</h3>
                                 <p class="text-gold-500 font-serif text-xl">陳怡如 Linda & 陳夏碩 Chassot</p>
                             </div>
                             <i class="fas fa-horse text-gold-500 text-2xl opacity-50"></i>
@@ -391,6 +389,17 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- Download Button -->
+            <div class="mt-12 text-center fade-in-section">
+                <a href="https://drive.google.com/drive/folders/18ov7RzR6Nm7ejIkfhRCDXd1XDk7V-zTi?usp=sharing" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-navy-900 text-white px-8 py-3 rounded-full hover:bg-gold-500 hover:text-navy-900 transition-all duration-300 font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105">
+                    <i class="fas fa-images"></i>
+                    <span>瀏覽更多照片</span>
+                </a>
             </div>
             
         </div>
@@ -953,15 +962,6 @@
             }
         });
 
-        // Close mobile menu when clicking a link
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-
         // 3. Fade In Animation (Intersection Observer)
         const observerOptions = {
             root: null,
@@ -980,6 +980,36 @@
 
         document.querySelectorAll('.fade-in-section').forEach(section => {
             observer.observe(section);
+        });
+
+        // 4. Smooth Scroll for Anchor Links (Fix for potential routing errors)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 80; // h-20 = 80px
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+        
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                         const icon = mobileMenuBtn.querySelector('i');
+                         if(icon) {
+                             icon.classList.remove('fa-times');
+                             icon.classList.add('fa-bars');
+                         }
+                    }
+                }
+            });
         });
     </script>
 </body>
